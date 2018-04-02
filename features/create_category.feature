@@ -13,7 +13,7 @@ Feature: Create/edit Categories
       When I fill in "category_name" with "new"
       And I fill in "category_keywords" with "new"
       And I press "Save"
-      Then I should see "test"
+      Then I should see "new"
 
 
     Scenario: Edit category
