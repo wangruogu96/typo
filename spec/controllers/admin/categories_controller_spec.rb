@@ -15,6 +15,27 @@ describe Admin::CategoriesController do
     get :index
     assert_response :redirect, :action => 'index'
   end
+  
+  it "test_create" do
+    n = Factory(:category)
+    Category.should_receive(:new).and_return(n)
+    n.should_receive(:save!).and_return(true)
+    post :edit, 'category' => { :name =>"nm",:keywords=> "kw",:permalink => "pl", :description => "dsp"   }
+    assert_response :redirect
+    assert_redirected_to :action => 'new'
+  end
+  
+  describe "test_new" do
+    before(:each) do
+      get :new
+    end
+
+    it 'should render template view' do
+      assert_template 'new'
+      assert_tag :tag => "table",
+                 :attributes => { :id => "category_container" }
+    end
+  end
 
   describe "test_edit" do
     before(:each) do
