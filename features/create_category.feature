@@ -1,7 +1,7 @@
 Feature: Create/edit Categories
   As an administator
   In order to manage my categories
-  I wish to create/rdit categories
+  i wish to create/rdit categories
 
   Background:
       Given the blog is set up
