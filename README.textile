@@ -1,3 +1,14 @@
+/*****
+for hw4: 
+herokuapp link: https://apricot-pie-72187.herokuapp.com/  
+          password: admin | oSZQvvZ
+
+->fix bug in controller/admin/categories_controller.rb;
+->add cucumber test unit in feature/create_categories.feature
+->add rspec test unit in spec/controller/admin/categories_controller_spec
+
+*****/
+
 h1. About Typo
 
 Typo has been around since March of 2005 making it one of the oldest blogging platforms in Rails.
